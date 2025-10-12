@@ -1,0 +1,91 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 20:11:20  September 02, 2025
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		pipeline_processor_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE6F17I7
+set_global_assignment -name TOP_LEVEL_ENTITY pipeline_processor
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "20:11:20  SEPTEMBER 02, 2025"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_id eda_simulation
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_N13 -to arstn
+set_location_assignment PIN_E10 -to LED[0]
+set_location_assignment PIN_F9 -to LED[1]
+set_location_assignment PIN_C9 -to LED[2]
+set_location_assignment PIN_D9 -to LED[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to LED[3]
+set_global_assignment -name EDA_USER_COMPILED_SIMULATION_LIBRARY_DIRECTORY "D:\\Quartus\\projects\\chip_design_school\\pipeline_processor\\simulation" -section_id eda_simulation
+set_global_assignment -name SYSTEMVERILOG_FILE brench_logic.sv
+set_global_assignment -name SYSTEMVERILOG_FILE offset_res.sv
+set_global_assignment -name QIP_FILE instr_mem.qip
+set_global_assignment -name SYSTEMVERILOG_FILE pipeline_processor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE registers.sv
+set_global_assignment -name SYSTEMVERILOG_FILE instr_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE my_ALU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE hazard_unit.sv
+set_global_assignment -name SOURCE_FILE defines.svh
+set_global_assignment -name SYSTEMVERILOG_FILE tb_pipeline_processor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE pipeline_processor1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE hazard_unit1.sv
+set_global_assignment -name SDC_FILE SDC1.sdc
+set_global_assignment -name QIP_FILE PLL_80MHz.qip
+set_location_assignment PIN_E1 -to clk_50
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name FLOW_ENABLE_POWER_ANALYZER ON
+set_global_assignment -name POWER_DEFAULT_TOGGLE_RATE "12.5 %"
+set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
+set_global_assignment -name POWER_USE_PVA OFF
+set_global_assignment -name POWER_REPORT_SIGNAL_ACTIVITY ON
+set_global_assignment -name POWER_REPORT_POWER_DISSIPATION ON
+set_global_assignment -name POWER_USE_INPUT_FILES ON
+set_global_assignment -name POWER_INPUT_FILE_NAME pipeline_processor.vcd -section_id pipeline_processor.vcd
+set_instance_assignment -name POWER_READ_INPUT_FILE pipeline_processor.vcd -to pipeline_processor
+set_location_assignment PIN_A2 -to out1
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
